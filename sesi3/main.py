@@ -11,24 +11,30 @@ while nama_user == "":
     nama_user = input("isi dulu nama anda: ")
 
 bentuk_goa = "|_|"
-goa_kosong = [bentuk_goa] * 4 # INI TETEP HARUS KOSONG
+goa_kosong = [bentuk_goa] * 4  # INI TETEP HARUS KOSONG
 
-goa = goa_kosong.copy() # INI ADALAH TEMPAT BARU UNTUK SI CUYPY
+goa = goa_kosong.copy()  # INI ADALAH TEMPAT BARU UNTUK SI CUYPY
 goa[cuypy_position - 1] = "|0_0|"
 
-goa_kosong = ' '.join(goa_kosong)
-goa = ' '.join(goa)
+goa_kosong = " ".join(goa_kosong)
+goa = " ".join(goa)
 
 
 while True:
-    print(f'''
+    print(
+        f"""
     Halo {nama_user}! Coba perhatikan goa dibawah ini  
     {goa_kosong}
-    ''')
+    """
+    )
 
-    pilihan_user = int(input("Menurut kamu di goa nomor berapa CUYPY berada? [1 / 2 / 3 / 4]: "))
+    pilihan_user = int(
+        input("Menurut kamu di goa nomor berapa CUYPY berada? [1 / 2 / 3 / 4]: ")
+    )
 
-    confirm_answer = input(f"apakah kamu yakin jawabannya adalah {pilihan_user}? [y/n]: ")
+    confirm_answer = input(
+        f"apakah kamu yakin jawabannya adalah {pilihan_user}? [y/n]: "
+    )
 
     if confirm_answer == "n":
         print("program dihentikan!")
@@ -41,9 +47,10 @@ while True:
     else:
         print("Silahkan ulangi programnya!")
         exit()
-        
+
     play_again = input("\n\napakah ingin melanjutkan gamenya lagi? [y/n]")
     if play_again == "n":
         break
-    
+
 print("program selesai!")
+
