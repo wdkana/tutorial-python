@@ -10,17 +10,22 @@ print("*****************************")
 nama_user = input("masukan nama kamu: ")
 
 bentuk_goa = "|_|"
-goa_kosong = [bentuk_goa] * 4 # INI TETEP HARUS KOSONG
+goa_kosong = [bentuk_goa] * 4  # INI TETEP HARUS KOSONG
 
-goa = goa_kosong.copy() # INI ADALAH TEMPAT BARU UNTUK SI CUYPY
+goa = goa_kosong.copy()  # INI ADALAH TEMPAT BARU UNTUK SI CUYPY
 goa[cuypy_position - 1] = "|0_0|"
 
-print(f'''
+print(
+    f"""
 Halo {nama_user}! Coba perhatikan goa dibawah ini  
 {goa_kosong}
-''')
+"""
+)
 
-pilihan_user = int(input("Menurut kamu di goa nomor berapa CUYPY berada? [1 / 2 / 3 / 4]: "))
+
+pilihan_user = int(
+    input("Menurut kamu di goa nomor berapa CUYPY berada? [1 / 2 / 3 / 4]: ")
+)
 
 confirm_answer = input(f"apakah kamu yakin jawabannya adalah {pilihan_user}? [y/n]: ")
 
@@ -35,3 +40,4 @@ elif confirm_answer == "y":
 else:
     print("Silahkan ulangi programnya!")
     exit()
+
